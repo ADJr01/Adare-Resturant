@@ -90,6 +90,8 @@ p{
     font-size: 24px;
     font-family: 'Times New Roman', Times, serif;
     text-decoration: none;
+    animation: get_up_from_below 1s 1s ease-in-out;
+    animation-fill-mode: backwards;
     
     
 }
@@ -113,14 +115,9 @@ nav a{
 @keyframes get_in_from_left{
     0%{
         opacity: 0;
-        transform: rotateX(-100%);
+        transform: rotateX(-50%);
     }
-    40%{
-        opacity: 0.5;
-    }
-    80%{
-        transform: translateX(2%);
-    }
+
     100%{
         opacity: 1;
         transform: translateX(0);
@@ -147,18 +144,24 @@ b{
 @keyframes get_in_from_right{
     0%{
         opacity: 0;
-        transform: rotateX(100%);
+        transform: rotateX(50%);
     }
-    40%{
-        opacity: 0.5;
-    }
-    80%{
-        transform: translateX(-3%);
-    }
+
     100%{
         opacity: 1;
         transform: translateX(0);
     }
 
 
+}
+
+@keyframes get_up_from_below{
+    0%{
+        opacity: 0;
+        transform: translateY(60%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
